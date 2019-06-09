@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+            <style>
+
+            body {
+                background: linear-gradient(to right, #50f9b7,#0591f5);
+                margin: 0;
+            }
+
+            button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: green;
+            }
+
+            h1 {
+                font-size: 280%;
+                color: #111472;
+                text-align: center; Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serifBlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-family: "acumin-pro",sans-serif;
+                font-weight: bold;
+            }
+
+            h2 {
+                font-size: 180%;
+                color: white;
+                text-align: center; Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serifBlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-family: "acumin-pro",sans-serif;
+                font-weight: bold;
+                margin-right: 15%;
+                margin-left: 15%;
+            }
+
+            h3 {
+                font-size: 175%;
+                color: white;
+                text-align: left; Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serifBlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-family: "acumin-pro",sans-serif;
+                font-weight: bold;
+                margin-right: 10%;
+                margin-left: 35%;
+            }
+
+            h4 {
+                font-size: 175%;
+                color: white;
+                text-align: center; Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serifBlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-family: "acumin-pro",sans-serif;
+                font-weight: bold;
+                margin-right: 13%;
+                margin-left: 13%;
+            }
+
+            h5 {
+                font-size: 175%;
+                background: linear-gradient(green, blue);
+                -webkit-background-clip: text;
+                color: transparent;
+                text-align: center; Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serifBlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-family: "acumin-pro",sans-serif;
+                font-weight: bold;
+                margin-right: 13%;
+                margin-left: 13%;
+            }
+
+            a:link {
+              color: #154088;
+              text-decoration: none;
+            }
+
+            a:visited {
+              color: #154088;
+            }
+
+            a:hover {
+              color: black;
+            }
+
+            a:active {
+              color: #497DDD;
+            }
+            </style>
+    </head>
+    <body>
+            <h1>
+                 <br>Data Analysis VK
+            </h1>
+            <h2>
+                Веб-сервис обращается к 3 сообществам, посвященным анализу данных в социальной сети Вконтакте:
+            </h2>
+            <h3>
+                <ul>
+                    <i>
+                        <li><a href="https://vk.com/datascience" class="global">Data Science</a></li>
+                        <li><a href="https://vk.com/datamining.team" class="global">Data Mining | Анализ Данных</a></li>
+                        <li><a href="https://vk.com/datamininglabs" class="global">Data Mining Labs</a></li>
+                    </i>
+                </ul>
+            </h3>
+            <h4>
+                Веб-служба cкачивает последние 300 записей, строит график частотности ключевых слов по тематике "анализ данных" для каждого сообщества, а также график-сравнение по всем сообществам.<h5>Please, choose your fighter:</h5>
+            </h4>
+        <center>
+            <button class="button" onclick="window.location.href = '/data_science'">Data Science</button>
+            <button class="button" onclick="window.location.href = '/data_mining'">Data Mining | Анализ данных</button>
+            <button class="button" onclick="window.location.href = '/data_mining_labs'">Data Mining Labs</button>
+        </center>
+        <br>
+        <center>
+                 <button class="button" onclick="window.location.href = '/comparison'"><b>Comparison</b></button>
+        </center>
+    </body>
+</html>
