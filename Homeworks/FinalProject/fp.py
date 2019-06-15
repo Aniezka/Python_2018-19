@@ -162,7 +162,7 @@ def get_top_number_words_lemmatized(how_many, table, color_local):
         Y.append(words_count1[m][1])
 
     plt.bar(X, Y, color=color_local)
-    plt.title("Ключевые слов")
+    plt.title("Ключевые слова")
     plt.xlabel("Слова")
     plt.ylabel("Частотность слов")
     plt.xticks(X, words_top, rotation=75)
