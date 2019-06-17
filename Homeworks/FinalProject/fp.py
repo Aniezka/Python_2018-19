@@ -26,9 +26,6 @@ c = 'owner_id=%i&offset=%i&count=%i&v=5.92&access_token=%s'
 d1 = 'data_unlemmatized_'
 d2 = 'data_lemmatized_'
 
-conn = sqlite3.connect('final_project_data.db')
-c1 = conn.cursor()
-
 
 def get_posts(how_many, id_local):
         count = 0
@@ -66,6 +63,8 @@ def get_posts(how_many, id_local):
 
 
 def save_posts_data_to_database(posts_local, table):
+    conn = sqlite3.connect('final_project_data.db')
+    c1 = conn.cursor()
     file_for_rewriting = open(d1 + table + '.txt', 'w', encoding='utf-8')
     file_for_rewriting.write('')
     file_for_rewriting.close()
@@ -81,6 +80,7 @@ def save_posts_data_to_database(posts_local, table):
         conn.commit()
 
     file_local.close()
+    conn.close()
 
 
 def save_lemmatized_data(texts_local, table):
@@ -162,7 +162,7 @@ def get_top_number_words_lemmatized(how_many, table, color_local):
         Y.append(words_count1[m][1])
 
     plt.bar(X, Y, color=color_local)
-    plt.title("Ключевые слов")
+    plt.title("Ключевые слова")
     plt.xlabel("Слова")
     plt.ylabel("Частотность слов")
     plt.xticks(X, words_top, rotation=75)
@@ -201,6 +201,9 @@ def get_comparison_graph(x, y_1, y_2, y_3):
 
 
 def rewrite_all_data_and_run(how_many):
+
+    conn = sqlite3.connect('final_project_data.db')
+    c1 = conn.cursor()
     c1.execute('DROP TABLE IF EXISTS data_mining')
     c1.execute('DROP TABLE IF EXISTS data_science')
     c1.execute('DROP TABLE IF EXISTS data_mining_labs')
@@ -214,6 +217,7 @@ def rewrite_all_data_and_run(how_many):
     c1.execute(pq2)
     c1.execute(pq3)
 
+    conn.close()
     posts1 = get_posts(how_many, owner_id1)  # WARNING!!!
     posts2 = get_posts(how_many, owner_id2)  # WARNING!!!
     posts3 = get_posts(how_many, owner_id3)  # WARNING!!!
@@ -229,9 +233,9 @@ def rewrite_all_data_and_run(how_many):
 
 # rewrite_all_data_and_run(300)
 
-x1, y1 = get_top_number_words_lemmatized(40, table1, '#89a203')
-x2, y2 = get_top_number_words_lemmatized(40, table2, '#96f97b')
-x3, y3 = get_top_number_words_lemmatized(40, table3, '#029386')
+x1, y1 = get_top_number_words_lemmatized(50, table1, '#89a203')
+x2, y2 = get_top_number_words_lemmatized(50, table2, '#96f97b')
+x3, y3 = get_top_number_words_lemmatized(50, table3, '#029386')
 
 get_comparison_graph(x1, y1, y2, y3)
 
@@ -269,15 +273,22 @@ def comparison_page():
     return render_template('comparison_page.html')
 
 
-'''
-if __name__ == '__main__':
+@app.route('/update_data')
+def update_data():
+    rewrite_all_data_and_run(300)
+    app.debug = True
+    port1 = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port1)
+    return render_template('welcome_page.html')
+
+
+'''if __name__ == '__main__':
     app.run(debug=False)
 '''
 
+
 if __name__ == '__main__':
-    import os
     app.debug = True
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
 
-conn.close()
