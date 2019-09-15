@@ -8,10 +8,10 @@
 Узнать, у кого из пользователей списка больше всего фолловеров (фолловеров можно достать по ссылке https://api.github.com/users/username/followers, где вместо username -- имя пользователя).
 
 
-A program that receives a list of github users and can do the following:
+A program that receives a list of github users and then does the following:
 
-Select one user from the list and print a list of its repositories (name) and their descriptions (description). The user must be selected using keyboard input.
-Print the list of languages (language) of the selected user and the number of repositories in which they are used.
-Find out which user has the most repositories in the list.
-Find out which language is the most popular among list users.
-Find out which of the list users has the most followers.
+Selects one user from the list and print a list of its repositories (name) and their descriptions (description). The user must be selected using keyboard input.
+Prints the list of languages (language) of the selected user and the number of repositories in which they are used.
+Finds out which user has the most repositories in the list.
+Finds out which language is the most popular among list users.
+Find sout which of the list users has the most followers.
