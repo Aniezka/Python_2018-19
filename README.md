@@ -1,3 +1,3 @@
 # Python_2018-19
 
-Создан новый репозиторий!
+New repository created!
