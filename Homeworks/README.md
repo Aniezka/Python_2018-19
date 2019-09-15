@@ -1,2 +1,2 @@
 # Homeworks
-Это папка для домашних заданий.
+My academic mini projects.
