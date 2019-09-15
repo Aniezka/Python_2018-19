@@ -2,10 +2,10 @@
 
 
 There are 3 topics (cats, dogs and roosters) and a list of 10-15 words has been compiled for each of them. Lists of words on various topics are stored in separate txt files.
-At startup, the program should prompt the user to choose one of three topics and download a list of words that matches the selection. Then it should randomly select from the list and tell the user something like "You have N attempts to guess a word of X letters" and output a line of _ by the number of letters in the word, separated by spaces.
-If the user guessed the letter, the program should replace _ in the appropriate place with the guessed letter.
-The program should give different messages depending on whether the user guessed the letter or not, as well as if she/he already entered this letter or if the entered character is not a letter.
-If there is not the named letter in the word, the program should draw a detail of the man.
+As the program runs, it should prompt the user to choose one of the three topics and download a list of words that matches the selection. Then it should randomly select from the list and display roughly the following message: "You have N attempts to guess a word of X letters" and output a line of _ symbols, separated by spaces, by the number of letters in the word. The number of attempts is chosen by the user themselves, it should remain the same for the whole session.
+If the user guesses the letter, the program should replace _ in the appropriate place with the guessed letter.
+The program should give different messages depending on whether the user guessed the letter or not, as well as if she/he has already entered this letter or if the entered character is not a letter.
+If the named letter is not in the word, the program draws a detail of the man.
 
 
 Существуют 3 темы (коты, собаки и петухи) и составлен по каждой из них список из 10-15 слов. Списки слов по разным темам сохранены в отдельных txt-файлах.
