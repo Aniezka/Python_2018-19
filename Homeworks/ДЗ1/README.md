@@ -1,4 +1,4 @@
-# ДЗ1
+# HW1/ДЗ1
 
 
 There are 3 topics (cats, dogs and roosters) and a list of 10-15 words has been compiled for each of them. Lists of words on various topics are stored in separate txt files.
