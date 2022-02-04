@@ -1,4 +1,4 @@
-# ДЗ2
+# HW2/ДЗ2
 
 A program that receives a list of github users and can do the following:
 - select one user from the list and print a list of his/her repositories and their description. The user must be selected using keyboard input.
