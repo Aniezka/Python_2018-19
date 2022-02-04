@@ -1,4 +1,4 @@
-# Газетный корпус
+# The newspaper corpus/Газетный корпус
 
 The newspaper corpus was created on the basis of the newspaper [The Arctic Circle](http://polkrug.ru).
 
